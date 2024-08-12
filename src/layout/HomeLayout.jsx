@@ -10,7 +10,7 @@ const HomeLayout = () => {
             <div className='h-screen w-screen overflow-x-hidden m-0 p-0 flex flex-col overflow-y-auto'>
                 <Navbar />
                 <Outlet />
-                <Footer />
+               
             </div>
         </>
     )

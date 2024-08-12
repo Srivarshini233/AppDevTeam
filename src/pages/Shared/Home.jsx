@@ -4,6 +4,8 @@ import { BoxRevealDemo } from './Box-Reveal'
 
 import { MagicCardDemo } from './Magic'
 import {  MagicCards } from './Magic-copy'
+import Footer from '@/components/Shared/Footer'
+import FeedbackForm from './Feedbackform'
 
 const Home = () => {
     return (<>
@@ -36,9 +38,12 @@ const Home = () => {
  
         </div>
         <br></br>
+        <FeedbackForm></FeedbackForm>
+     
         <br></br>
         <br></br>
         <br></br>
+        <Footer></Footer>
         </>
     )
 }

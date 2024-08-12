@@ -14,51 +14,51 @@ const MenCategory = () => {
         <div className= "category-content" >
         <div
         className="category-item"
-    onClick = {() => handleNavigation("/eyeglass")}
+    onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Eyeglasses" />
-        <span>Eyeglasses </span>
+    <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-banner/17129155534.webp" alt = "Eyeglasses" />
+        <span>Spider man</span>
         </div>
         < div
 className = "category-item"
-onClick = {() => handleNavigation("/sunglass-product")}
+onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Sunglasses" />
-        <span>Sunglasses </span>
+    <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-banner/17129155075.webp" alt = "Sunglasses" />
+        <span>Paw Patrol</span>
         </div>
         < div
 className = "category-item"
-onClick = {() => handleNavigation("/computer-glasses-product")}
+onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Computer Glasses" />
-        <span>Computer Glasses </span>
+    <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-banner/17129151841.webp" alt = "Computer Glasses" />
+        <span>Avengers</span>
             </div>
             < div
 className = "category-item"
-onClick = {() => handleNavigation("/reading-glasses-product")}
+onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Reading Glasses" />
-        <span>Reading Glasses </span>
+    <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-banner/17129157097.webp" alt = "Reading Glasses" />
+        <span>Harry Potter</span>
             </div>
             < div
 className = "category-item"
-onClick = {() => handleNavigation("/contact-lenses-product")}
+onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Contact Lenses" />
-        <span>Contact Lenses </span>
+    <img src="https://i.pinimg.com/236x/37/06/33/3706332e3f1eee45cbb1323a7d5caf39.jpg" alt = "Contact Lenses" />
+        <span>Cars and Bikes</span>
             </div>
             < div
 className = "category-item"
-onClick = {() => handleNavigation("/accessories-product")}
+onClick = {() => handleNavigation("/toyproduct")}
 style = {{ cursor: "pointer" }}
       >
-    <img src="https://via.placeholder.com/100" alt = "Accessories" />
-        <span>Accessories </span>
+    <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-banner/17129152996.webp" alt = "Accessories" />
+        <span>Baby shark</span>
         </div>
         
         </div></>

@@ -37,6 +37,7 @@
     justify-content: center; /* Center category items horizontally */
     flex-wrap: wrap;
     gap: 2rem;
+   
   }
   
   .category-item {

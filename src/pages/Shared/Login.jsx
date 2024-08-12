@@ -1,36 +1,59 @@
-import React from 'react';
-
-
+import React, { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast'
+import { authService } from '@/services/auth'
 const Login = () => {
+    const navigate = useNavigate()
+
+    const checkRedirect = async () => {
+        if (authService.getToken() !== null && authService.isLoggedIn()) {
+            const userRole = authService.getUserRole();
+            if (userRole !== null) {
+                if (userRole === "Admin") {
+                    navigate('/admin/dashboard');
+                } else if (userRole === "User") {
+                    navigate('/shopbycategory');
+                } else {
+                    toast.error("Something went wrong");
+                }
+            }
+        }
+    };
+
+    useEffect(() => {
+        checkRedirect();
+    }, []);
+
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        const res = await authService.SignIn(emailRef.current.value, passwordRef.current.value)
+        if (res.status === 200) {
+            authService.setToken(res.data.accessToken)
+            toast.success("Welcome")
+            console.log(res.data.accessToken)
+            console.log(authService.getToken())
+
+            setTimeout(() => {
+                checkRedirect();
+            }, 3000)
+
+        }
+    };
     return (
-        <div className='container'>
-            <div className='card'>
-                <div className='card-header'>
-                    <h2 className='card-title'>Login</h2>
-                    <p className='card-description'>Enter your email below to login</p>
-                </div>
-                <div className='card-content'>
-                    <div className='divider'>
-                        <span className='divider-line' />
-                    </div>
-                    <div className='input-group'>
-                        <label htmlFor="email">Email</label>
-                        <input id="email" type="email" placeholder="user@iamneo.ai" />
-                    </div>
-                    <div className='input-group'>
-                        <label htmlFor="password">Password</label>
-                        <input id="password" type="password" placeholder="******" />
-                    </div>
-                </div>
-                <div className='card-footer'>
-                    <button className='button'>Login</button>
-                </div>
-                <div className="switchto">
-                    <button>Switch to admin</button>
-                </div>
+        <>
+            <div className='p-0 m-0 h-[90vh] w-screen flex justify-center items-center flex-col'>
+                <form className='flex flex-col gap-5 bg-slate-50/80 h-3/6 w-[30%] items-center justify-center rounded-md shadow-md shadow-red-100' onSubmit={handleLogin}>
+                    <input type="email" ref={emailRef} placeholder='Email' className='bg-red-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-red-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' required />
+                    <input type="password" ref={passwordRef} placeholder='Password' className='bg-red-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-red-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' required />
+                    <button type="submit" className='w-[80%] bg-gradient-to-tr from-red-600 to-red-300 text-white p-2 rounded-sm font-bold mt-4 shadow-md shadow-red-500/40'>Login</button>
+                    <p>Don't have an account ? <span className='text-red-500 cursor-pointer font-bold' onClick={() => navigate('/register')}> Register ! </span></p>
+                </form>
             </div>
-        </div>
-    );
+            <Toaster />
+        </>
+    )
 }
 
-export default Login;
+export default Login

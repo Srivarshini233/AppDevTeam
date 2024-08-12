@@ -16,6 +16,15 @@ import "./Style/Register.css"
 import "./Style/Footer.css"
 import ShopByCategory from './pages/User/UserLanding'
 import UserHome from './pages/User/UserHome'
+import GirlsProduct from './pages/User/GirlsProduct'
+import KidssProduct from './pages/User/KidsProduct'
+import './pages/User/PaymentDetails.css'
+import CartPage from './pages/User/CartPage'
+import AdminProducts from './pages/Admin/AdminProduct'
+import PaymentDetails from './pages/User/PaymentDetails'
+import OrderPlaced from './pages/User/OrderPlaced'
+import AddressDetails from './pages/User/Address'
+
 
 const App = () => {
     return (
@@ -31,12 +40,22 @@ const App = () => {
                     <Route element={<Userlayout />}>
                         <Route path='/shopbycategory' element={<ShopByCategory />} />
                         <Route path='/toyproduct' element={<ToyProduct/>} />
+                        <Route path='/girls-product' element={<GirlsProduct/>} />
+                        <Route path='/kidsproduct' element={<KidssProduct/>} />
+                        <Route path="/order-placed" element={<OrderPlaced />} />
+                        <Route path="/address" element={<AddressDetails />} />
+                      
+                        <Route path='/logout' element={<Login/>}/>
+                        <Route path='/payment' element={<PaymentDetails/>}/>
+                        <Route path="/cart" element={<CartPage />} />
+                        
                         <Route path='/userhome' element={<UserHome />} />
                     </Route>
 
                     <Route element={<AdminLayout />}>
                         <Route path='/admin/dashboard' element={<AdminDashboard />} />
                         <Route path='/admin/users' element={<AdminUsers />} />
+                        <Route path='/admin/product' element={<AdminProducts />} />
                     </Route>
 
 

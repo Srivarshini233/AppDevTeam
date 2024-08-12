@@ -135,13 +135,12 @@
     max-width: 100%;
     box-sizing: border-box;
     transform: scale(0.9); /* Reduce grid size */
-    transition: transform 0.3s ease; /* Smooth transition */
   }
   
   /* Product card styling */
   .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #f5efef;
+    border: 1px solid #f60707;
     border-radius: 8px;
     padding: 12px; /* Reduced padding */
     text-align: center;
