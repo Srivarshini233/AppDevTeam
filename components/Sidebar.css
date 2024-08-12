@@ -1,0 +1,30 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #e0f7fa; /* Match the navbar background color */
+  border-right: 1px solid #b2ebf2; /* Lighter border to match sidebar background */
+  color: #000000; /* Text color */
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #00796b; /* Header text color to match navbar icons */
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000; /* Label text color */
+}
+
+.filter-group input {
+  margin-right: 10px;
+  color: #000000; /* Input text color */
+  border: 1px solid #b2ebf2; /* Input border color to complement the sidebar background */
+  background-color: #ffffff; /* Input background color */
+}

@@ -1,0 +1,75 @@
+/* Header.css */
+#shopify-section-template--17884943024344__tru_quick_nav_X6GATM {
+    background: rgba(224, 247, 250, 0.80); /* Background color to match the navbar */
+    position: relative; /* Ensure it stays in place */
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+    width: 100%; /* Ensure it spans the full width */
+    padding: 0 20px; /* Add padding to avoid content touching edges */
+    margin: 0; /* Remove default margin */
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    #shopify-section-template--17884943024344__tru_quick_nav_X6GATM {
+      display: block;
+    }
+}
+
+#shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 30px;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav {
+      flex-direction: row;
+    }
+}
+
+#shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav-title {
+    color: #212427;
+    font-family: "Buenos Aires";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+    #shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+}
+
+#shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav-link {
+    font-size: 17px;
+    color: #FFF;
+    font-family: "Buenos Aires";
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 75px;
+    background: #00796b; /* Accent color */
+    padding: 5px 25px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+    #shopify-section-template--17884943024344__tru_quick_nav_X6GATM .tru-quick-nav-link {
+      font-size: 24px;
+    }
+}
